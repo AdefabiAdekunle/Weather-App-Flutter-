@@ -106,8 +106,10 @@ class _HomeState extends State<Home> {
               children: <Widget>[
                 Center(
                   child:Text("Weather Analysis:\n",style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 30.0,
                     fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+
 
                 ),
                 ),
