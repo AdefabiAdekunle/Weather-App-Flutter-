@@ -59,7 +59,7 @@ class _HomeState extends State<Home> {
       body: Column(
         children: <Widget>[
           Container(
-              height: MediaQuery.of(context).size.height / 3,
+              height: MediaQuery.of(context).size.height / 4,
               width: MediaQuery.of(context).size.width,
               color: Colors.blue,
               child: Column(
@@ -101,9 +101,17 @@ class _HomeState extends State<Home> {
           ),
           Expanded(
               child: Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: EdgeInsets.only(top: 70,bottom: 20,left: 20,right: 20),
             child: ListView(
               children: <Widget>[
+                Center(
+                  child:Text("Weather Analysis:\n",style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+
+                ),
+                ),
+                ),
                 ListTile(
                   leading: FaIcon(FontAwesomeIcons.thermometerHalf),
                   title: Text("Temperature"),
@@ -119,7 +127,7 @@ class _HomeState extends State<Home> {
                 ),
                 ListTile(
                   leading: FaIcon(FontAwesomeIcons.sun),
-                  title: Text("TemperatureHumidityture"),
+                  title: Text("Temperature Humidity"),
                   trailing:
                       Text(humidity != null ? humidity.toString() : "Loading"),
                 ),
